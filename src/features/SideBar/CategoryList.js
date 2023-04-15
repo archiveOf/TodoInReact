@@ -32,7 +32,8 @@ const CategoryList = () => {
                 <div className='buttons'>
                     <button className='modalCancel' onClick={() => setModal(false)}>Отмена</button>
                     <button className='modalAdd' onClick={() => {
-                        dispatch(categoryAdded(category))
+                        dispatch(categoryAdded({title: category}))
+                        setCategory('')
                         setModal(false);
                     }}>Добавить</button>
                 </div>

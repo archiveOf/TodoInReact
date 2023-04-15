@@ -7,7 +7,7 @@ const Header = () => {
         <header>
             <button onClick={() => setModal(true)}>Новая задача</button>
             <MyModal visible={modal} setVisible={setModal}>
-                <AddTodoForm />
+                <AddTodoForm visible={modal} setVisible={setModal}/>
             </MyModal>
         </header>
     )

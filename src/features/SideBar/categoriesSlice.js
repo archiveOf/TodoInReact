@@ -25,7 +25,8 @@ const categoriesSlice = createSlice({
         //     }
         // },
         categoryAdded(state, action) {
-            state.categories.push({title: action.title, id: nanoid()})
+            // const { title } = action.payload;
+            state.push({id: nanoid(), title: action.payload.title})
         },
         categoryDeleted(state, action) {
             const { categoryId, title } = action.payload;
