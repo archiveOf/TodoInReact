@@ -1,0 +1,24 @@
+.modalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #29A19C;
+}
+.modalInput {
+    border-radius: 30px;
+}
+
+.modalAdd {
+    background: #29A19C;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.modalCancel {
+    background: #F05454;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    cursor: pointer;
+}

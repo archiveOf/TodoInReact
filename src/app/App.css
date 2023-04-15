@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.App {
+    display: flex;
+}
+
+h1 {
+    color: red;
+}
+
+.modalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #29A19C;
+}
+.modalInput {
+    border-radius: 30px;
+    outline: none;
+    width: auto;
+    width: 276px;
+    height: 30px;
+}
+
+.modalAdd {
+    background: #29A19C;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+.modalCancel {
+    background: #F05454;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+.buttons {
+    margin-top: 20px;
+    width: 276px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* СайдБар */
+
+.sidebar {
+    width: 230px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    height: 100vh;
+}
+
+/* Стили категории */
+
+ul,li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category__title, .data__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #29A19C;
+    line-height: 32px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.category__items, .data__items {
+    color: #282846;
+}
+
+.category__items li, .data__items li {
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+.category__items li:hover, .data__items li:hover {
+    scale: 1.03;
+    border-bottom: 2px solid #29A19C;
+}
+
+.category__items img {
+    margin-right: 10px;
+}
+
+.category__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 60px;
+}
+
+.category__button:hover {
+    scale: 1.03;
+}
+
+.category__button button {
+    border: none;
+    font-weight: 600;
+    color: #29A19C;
+    background: transparent;
+    margin-left: 10px;
+}
+
+.category__button button:hover {
+    cursor: pointer;
+}
