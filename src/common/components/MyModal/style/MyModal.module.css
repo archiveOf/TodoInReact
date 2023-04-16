@@ -10,10 +10,11 @@
 }
 
 .myModalContent {
-    padding: 25px;
+    /* padding: 25px; */
     border-radius: 16px;
     background: #fff;
-    min-width: 250px;
+    /* min-width: 250px; */
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: start;

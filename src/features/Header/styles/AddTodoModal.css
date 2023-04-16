@@ -1,0 +1,87 @@
+.addTodoModal {
+    width: 700px;
+    padding: 20px;
+}
+
+.addTodoModal__header {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.addTodoModalForm label {
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#title {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #2828461A;
+}
+
+#title::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+input:focus {
+    outline: none;
+}
+
+.title__field {
+    margin-bottom: 30px;
+}
+
+.secondary-information__field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.secondary-information__field div {
+    width: 33%;
+    margin-right: 30px;
+}
+
+.btns__field {
+    display: flex;
+    justify-content: space-between;
+}
+
+#category {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #2828461A;
+}
+#priority {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #2828461A;
+}
+#limit {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #2828461A;
+}
+
+.btns__field button{
+    padding: 10px 25px;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.cancelTodo__btn {
+    background-color: var(--delete-bg);
+}
+.addTodo__btn {
+    background-color: var(--accent-color);
+}

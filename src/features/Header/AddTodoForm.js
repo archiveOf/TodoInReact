@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAllCategories } from '../SideBar/categoriesSlice';
 import { todoAdded } from '../todos/todosSlice';
+import './styles/AddTodoModal.css'
+
 
 const AddTodoForm = ({visible, setVisible}) => {
 
@@ -22,35 +24,48 @@ const AddTodoForm = ({visible, setVisible}) => {
     };
 
     return (
-        <div id="addTodoModal">
-            <h3>Добавить новую задачу</h3>
-            <form onSubmit={(e) => e.preventDefault()}>
-                <label htmlFor="title">Что нужно сделать?</label>
-                <input id="title" name="title" type="text" placeholder="Приготовить ужин" value={title} onChange={(e) => { setTitle(e.target.value) }} />
+        <div className="addTodoModal">
+            <h3 className='addTodoModal__header'>Добавить новую задачу</h3>
+            <form className='addTodoModalForm' onSubmit={(e) => e.preventDefault()}>
+                <div className='title__field'>
+                    <label htmlFor="title">Что нужно сделать?</label>
+                    <input id="title" name="title" type="text" placeholder="Приготовить ужин" value={title} onChange={(e) => { setTitle(e.target.value) }} />
+                </div>
 
-                <label htmlFor="category">Категория</label>
-                <select id="category" required onChange={(e) => { setCategory(e.target.value) }}>
-                    <option defaultValue={""} hidden>Выбрать</option>
-                    {
-                        categories.map((category, index) => {
-                            return <option value={category.title} key={index}>{category.title}</option>;
-                        })
-                    }
-                </select>
+                <div className='secondary-information__field'>
+                    <div>
+                        <label htmlFor="category">Категория</label>
+                        <select id="category" required onChange={(e) => { setCategory(e.target.value) }}>
+                            <option defaultValue={""} hidden>Выбрать</option>
+                            {
+                                categories.map((category, index) => {
+                                    return <option value={category.title} key={index}>{category.title}</option>;
+                                })
+                            }
+                        </select>
+                    </div>
 
-                <label htmlFor="end">Когда?</label>
-                <input type="date" id="end" name="end" onChange={(e) => { setLimit(e.target.value) }}></input>
+                    <div>
+                        <label htmlFor="limit">Когда?</label>
+                        <input type="date" id="limit" name="limit" onChange={(e) => { setLimit(e.target.value) }}></input>
+                    </div>
 
-                <label htmlFor="priority">Приоритет задачи</label>
-                <select id="priority" required onChange={(e) => { setPriority(e.target.value) }}>
-                    <option defaultValue={""} hidden>Выбрать</option>
-                    <option value="low">Низкий</option>
-                    <option value="middle">Средний</option>
-                    <option value="high">Высокий</option>
-                </select>
+                    <div>
+                        <label htmlFor="priority">Приоритет задачи</label>
+                        <select id="priority" required onChange={(e) => { setPriority(e.target.value) }}>
+                            <option defaultValue={""} hidden>Выбрать</option>
+                            <option value="low">Низкий</option>
+                            <option value="middle">Средний</option>
+                            <option value="high">Высокий</option>
+                        </select>
+                    </div>
 
-                <button>Отменить</button>
-                <button onClick={AddTodo}>Добавить</button>
+                </div>
+
+                <div className='btns__field'>
+                    <button className='cancelTodo__btn' onClick={() => setVisible(false)}>Отменить</button>
+                    <button className='addTodo__btn' onClick={AddTodo}>Добавить</button>
+                </div>
             </form>
         </div>
 

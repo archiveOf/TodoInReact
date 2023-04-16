@@ -5,7 +5,15 @@
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --accent-color: #29A19C;
+    --delete-bg: #F05454;
+    --main-bg: #F0F0F0;
+    --component-bg: #fff;
+  }
 
 body {
     background-color: #E5E5E5;
