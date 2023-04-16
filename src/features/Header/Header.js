@@ -5,7 +5,7 @@ import './styles/Header.css'
 const Header = () => {
     const [modal, setModal] = useState(false);
     return (
-        <header>
+        <header className='main-header'>
             <button className='addTask' onClick={() => setModal(true)}>Новая задача</button>
             <MyModal visible={modal} setVisible={setModal}>
                 <AddTodoForm visible={modal} setVisible={setModal}/>

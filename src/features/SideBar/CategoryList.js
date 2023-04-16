@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MyModal from '../../common/components/MyModal/MyModal';
+import Category from './Category';
 
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { selectAllCategories, categoryAdded} from './categoriesSlice';
@@ -16,9 +17,7 @@ const CategoryList = () => {
             <h2 className="category__title">Категории</h2>
             <ul className='category__items'>
                 {
-                    categories.map((category, index) => {
-                        return <li key={index}><img src="./img/1.svg" alt="#" />{category.title}</li>; //Сделать так чтобы цифра увеличивалась на каждую итерацию
-                    })
+                    categories.map( (category, index) => <Category key={index} category={category}/> )
                 }
             </ul>
             <div className='category__button' onClick={() => setModal(true)}>

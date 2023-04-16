@@ -3,14 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectAllCategories } from '../SideBar/categoriesSlice';
 import { todoAdded } from '../todos/todosSlice';
 import './styles/AddTodoModal.css'
-
+import { useHref } from 'react-router-dom'
 
 const AddTodoForm = ({visible, setVisible}) => {
+
+    console.log(useHref())
 
     const dispatch = useDispatch();
     const categories = useSelector(selectAllCategories);
     const [title, setTitle] = useState('');
-    const [category, setCategory] = useState();
+    const [category, setCategory] = useState(useHref());
     const [priority, setPriority] = useState();
     const [limit, setLimit] = useState();
 
@@ -35,7 +37,7 @@ const AddTodoForm = ({visible, setVisible}) => {
                 <div className='secondary-information__field'>
                     <div>
                         <label htmlFor="category">Категория</label>
-                        <select id="category" required onChange={(e) => { setCategory(e.target.value) }}>
+                        <select id="category"  required onChange={(e) => { setCategory(e.target.value) }}>
                             <option defaultValue={""} hidden>Выбрать</option>
                             {
                                 categories.map((category, index) => {

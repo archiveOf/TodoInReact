@@ -1,0 +1,73 @@
+/* СайдБар */
+
+.sidebar {
+    width: 230px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    min-height: 100vh;
+    margin-right: 70px;
+}
+
+/* Стили категории */
+
+ul,li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category__title, .data__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #29A19C;
+    line-height: 32px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.category__items, .data__items {
+    color: #282846;
+}
+
+.category__items li, .data__items li {
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+.category__items li:hover, .data__items li:hover {
+    scale: 1.03;
+    border-bottom: 2px solid #29A19C;
+}
+
+.category__items img {
+    margin-right: 10px;
+}
+
+.category__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 60px;
+}
+
+.category__button:hover {
+    scale: 1.03;
+}
+
+.category__button button {
+    border: none;
+    font-weight: 600;
+    color: #29A19C;
+    background: transparent;
+    margin-left: 10px;
+}
+
+.category__button button:hover {
+    cursor: pointer;
+}
