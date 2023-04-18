@@ -8,34 +8,30 @@ import  { selectAllCategories } from '../features/SideBar/categoriesSlice'
 import MyModal from '../common/components/MyModal/MyModal';
 import AddCategoryModal from '../features/SideBar/AddCategoryModal';
 import AddTodoForm from '../features/Header/AddTodoForm';
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import Layout from './Layout';
+
 function App() {
   const categories = useSelector(selectAllCategories)
   const [modal, setModal] = useState(true);
 
   return (
     <div className="App">
-      <SideBar/>
-      <main>
-        <Header visible={modal} setVisible={setModal}/>
         <Routes>
-          <Route path="/" element={<TodoList category={'Дом'}/>} />
-            
-          {
-            categories.map( (category, index) => {
-              return <Route key={index} path={`/categories/${category.title}`} element={<TodoList category={category.title}/>} />
-            })
-          }
-
-          <Route path="/addTodo" element={
-                        <MyModal visible={modal} setVisible={setModal}>
-                          <AddTodoForm visible={modal} setVisible={setModal}/>
-                        </MyModal>} 
-          />
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<TodoList category="Дом" />} />
+            {
+              categories.map( (category, index) => {
+                return (
+                  <Route key={index}
+                        path={`/categories/${category.title}`} 
+                        element={<TodoList category={category.title}/>} 
+                  />
+                )
+              })
+            }
+          </Route>
         </Routes>
-          
-      
-      </main>
     </div>
   );
 }
