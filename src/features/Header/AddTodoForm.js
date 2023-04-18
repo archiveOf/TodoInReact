@@ -7,7 +7,7 @@ import { useHref } from 'react-router-dom'
 
 const AddTodoForm = ({visible, setVisible}) => {
 
-    console.log(useHref())
+    // console.log(useHref())
 
     const dispatch = useDispatch();
     const categories = useSelector(selectAllCategories);

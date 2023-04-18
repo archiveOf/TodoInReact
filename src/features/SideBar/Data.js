@@ -6,10 +6,10 @@ const Data = () => {
             <h2 className='data__title'>Данные</h2>
             <ul className='data__items'>
                 <li>
-                    <img src="./img/statistic.svg" alt='нет'/> Статистика
+                    <img src="/img/statistic.svg" alt='нет'/> Статистика
                 </li>
                 <li>
-                    <img src="./img/up.svg"/> Сравнить
+                    <img src="/img/up.svg"/> Сравнить
                 </li>
             </ul>
         </div>

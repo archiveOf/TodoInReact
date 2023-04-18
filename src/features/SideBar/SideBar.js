@@ -8,7 +8,7 @@ import './styles/Sidebar.css'
 function SideBar() {
     return (
         <div className="sidebar">
-            <div><img src="./img/logo.svg" alt="логотип" /></div>
+            <div><img src="/img/logo.svg" alt="логотип" /></div>
             <CategoryList />
             <Data />
         </div>

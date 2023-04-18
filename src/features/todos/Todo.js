@@ -25,10 +25,10 @@ const Todo = ({todo, index}) => {
                             <span className='todo__text'>{todo.title}</span>
                             <div className='todo__btns'>
                                 <button className='todo__btn todo__btn-edit'>
-                                    <img src='./img/edit.svg' alt='edit task'/>
+                                    <img src='/img/edit.svg' alt='edit task'/>
                                 </button>
                                 <button className='todo__btn todo__btn-delete'>
-                                    <img src='./img/trash.svg' alt='delete task' onClick={handleDeleteTask}/>
+                                    <img src='/img/trash.svg' alt='delete task' onClick={handleDeleteTask}/>
                                 </button>
                             </div>
             </li>

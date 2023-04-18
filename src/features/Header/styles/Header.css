@@ -14,6 +14,11 @@
     position: relative;
 }
 
+.addTask a {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
 .addTask:before {
     background: url('/public/img/btnAddPlus.svg') no-repeat center;
     content: '';
