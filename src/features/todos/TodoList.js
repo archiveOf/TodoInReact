@@ -5,9 +5,11 @@ import Todo from './Todo'
 import TodosInProgress from './TodosInProgress'
 import TodosIsCompleted from './TodosIsCompleted'
 import './styles/TodoList.css'
+import { useParams } from 'react-router-dom'
 
-const TodoList = ({category}) => {
+const TodoList = () => {
     // console.log(category)
+    const { category } = useParams();
     const todos = useSelector( state => state.todos.filter( todo => todo.category === category))
     // console.log(todos)
     return (
